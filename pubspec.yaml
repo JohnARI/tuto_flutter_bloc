@@ -1,0 +1,53 @@
+name: tuto_flutter_bloc
+description: A new Flutter project.
+
+# Cette ligne permet de ne pas publier le projet sur pub.dev et de le garder privé
+publish_to: 'none' # Enlever cette ligne si on veut publier le projet
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.1.0-63.1.beta <4.0.0'
+
+# Pour ajouter les dépendances on exécute la commande flutter pub add {nom de la dépendance} qu'on peut trouver sur pub.dev
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+
+  # Pour utiliser les blocs il faut ces 3 dépendances:
+  flutter_bloc: ^8.1.3
+  equatable: ^2.0.5
+  bloc: ^8.1.2
+  # ================================
+  go_router: ^7.1.1
+  http: ^1.0.0
+  flutter_dotenv: ^5.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  #! Linter pour analyser le code et le rendre plus propre (ecoutez le svp :D)
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+
+  #! Pour ajouter des assets à l'application il faut ajouter le chemin relatif:
+  assets:
+    - .env
+  #   - images/a_dot_ham.jpeg
+
+  #! Pour ajouter des polices de caractères à l'application il faut ajouter le chemin relatif et le nom de la police:
+  # fonts:
+  #   - family: Roboto
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: RobotoMedium
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
